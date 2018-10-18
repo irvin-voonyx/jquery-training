@@ -1,0 +1,18 @@
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+Module 5
+
+Créer un plugin a appliquer a n'importe quel élément contenant du texte afin de modifiier la taille de la police, le poids (bold),  le style (italic, ...) et sa couleur.
+
+Ces 4 infos seront fournis en tant que paramètre du plugin.
+
+$.fn.lookGood = function(fontSize, fontWeight, fontStyle, fontColor) {
+                this.css("fontSize", fontSize);
+                this.css("fontWeight", fontWeight);
+                this.css("fontStyle", fontStyle);
+                this.css("color", fontColor);
+            };
+
+            $("p").lookGood("30px", "bold", "italic", "#ff00ff");
+------------------------------------------------------------------

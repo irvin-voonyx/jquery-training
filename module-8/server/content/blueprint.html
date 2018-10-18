@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My JQuery list</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">        
+
+    <style>
+        .orange { color: #ffaa00}
+        .blue { color: #0000ff}
+
+        .answer { border: 1px solid #00ff00 }
+    
+        #quote { border: 1px solid #000; margin-top: 20px; padding: 20px }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="orange">My JQuery training</h2>
+
+        <ul class="ora">
+            <li>Module 1 : D&eacute;marrer jQuery</li>
+            <li>Module 2 : Effets et animations</li>
+            <li>Module 3 : Manipulation du DOM
+                <ul>
+                    <li>Ajouter des &eacute;l&eacute;ments</li>
+                    <li>Supprimer des &eacute;l&eacute;ments</li>
+                    <li>Changer les attributs</li>
+                </ul>
+            </li>
+            <li>Module 4 : Formulaire et validation</li>
+        </ul>
+
+        <div id="quote">
+            Ac adipiscing aliquet ante at dictumst dis enim fames habitant imperdiet ligula lorem mus non nostra nulla nullam per quisque risus sapien scelerisque sit torquent ullamcorper urna vel volutpat. Ac ante consequat cubilia cum cursus dictumst dignissim elementum facilisis lectus leo luctus magnis malesuada mi montes nunc ornare parturient porttitor primis quis sagittis suspendisse taciti ultrices ut vestibulum. Ad aptent dictum eros eu habitasse mi parturient penatibus placerat sodales tellus ultricies venenatis. Aliquam dapibus duis erat eros ipsum lacus laoreet orci sociis suscipit venenatis. Commodo dictumst donec fusce habitasse lorem metus molestie montes natoque ornare rhoncus ridiculus sapien senectus sodales sollicitudin tellus torquent vel vestibulum.
+            <br/>
+            Ac ad aliquam amet at commodo cubilia dolor felis fusce himenaeos inceptos interdum libero magna mi mus nulla nunc porttitor posuere praesent proin pulvinar tristique velit. Ante consequat dictumst duis est hac inceptos justo lobortis malesuada mollis nascetur nisi pellentesque senectus sodales ullamcorper vehicula. A commodo condimentum cubilia dignissim dolor eget elementum fusce habitant hac lectus malesuada montes odio pellentesque praesent senectus taciti tortor tristique volutpat. Aptent cum cursus eleifend ipsum lectus maecenas nulla quam turpis. Aptent commodo curabitur curae; dis duis est himenaeos inceptos ipsum malesuada mi mollis natoque nibh non nulla pretium ridiculus sagittis sed sit sodales suscipit ut volutpat vulputate.
+        </div>
+
+        <p class="orange">Paragraphe orange</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Where the mafic happens
+            $.ajax({
+                url: "http://127.0.0.1:8080/",
+                success: function(response) {
+                    alert(response);
+                },
+                error: function(xhr,status,error) {
+                    alert("Error");
+                    console.log("XHR " + xhr);
+                    console.log("Status " + status);
+                    console.log("Error " + error)
+                }
+            });
+        })
+    </script>
+</body>
+</html> 

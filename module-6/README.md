@@ -1,0 +1,1 @@
+https://matthewlein.com/tools/jquery-easing

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My JQuery list</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">        
+
+    <style>
+        .red { background-color: #ff0000; display: block; position: absolute; left: 150px; top: 150px; height: 200px; width: 200px }
+        .blue { background-color: #0000ff; display: none; position: absolute; left: 400px; top: 400px; height: 200px; width: 200px }
+        .green { background-color: #00FF00; display: none; position: absolute; left: 400px; top: 0px; height: 200px; width: 200px; border-radius: 100px }
+    </style>
+</head>
+
+<body>
+
+    <div class="red"></div>
+
+    <div class="blue"></div>
+
+    <div class="green"></div>
+
+    <p></p>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var ball = $(".green")
+            ball.fadeIn("2000");
+
+            reboundForce = 100;
+            for (i = 1; i < 6; i ++) {
+                $(".green").animate({top: 500}, 500)
+                .animate({top: i * 100}, 500)
+                reboundForce += 100;
+            }
+
+
+            // Where the magic happens
+        
+            
+        })
+    </script>
+</body>
+</html> 

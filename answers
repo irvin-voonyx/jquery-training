@@ -50,6 +50,16 @@ var ball = $(".green")
                 reboundForce += 100;
             }
 
+
+--------------------------------------------------------------
+Module 3
+
+A partir du tableau, logger dans la console les temps passés par module sour la forme module X : n heures
+hint each , :first, :last
+
+$("tr").each(function() {
+                console.log($("td:first", this).html() + ": " + $("td:last", this).html());
+            });
 --------------------------------------------------------------
 
 Module 5

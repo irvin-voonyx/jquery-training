@@ -25,7 +25,7 @@
             <ul class="ora">
                 <li>Module 1 : D&eacute;marrer jQuery</li>
                 <li>Module 2 : Effets et animations</li>
-                <li>Module 3 : Manipulation du DOM<
+                <li>Module 3 : Manipulation du DOM
                     <ul>
                         <li>Ajouter des &eacute;l&eacute;ments</li>
                         <li>Supprimer des &eacute;l&eacute;ments</li>
@@ -43,6 +43,25 @@
         </div>
 
         <p class="orange">Paragraphe orange</p>
+
+        <table>
+            <th>
+                <td>Module</td>
+                <td>Temps pass&eacute;</td>
+            </th>
+            <tr>
+                <td>Module 1</td>
+                <td>3 heures</td>
+            </tr>
+            <tr>
+                <td>Module 2</td>
+                <td>2 heures</td>
+            </tr>
+            <tr>
+                <td>Module 3</td>
+                <td>5 heures</td>
+            </tr>
+        </table>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -50,14 +69,9 @@
     <script type="text/javascript">
         $(document).ready(function() {
             // Where the magic happens
-            $.fn.lookGood = function(fontSize, fontWeight, fontStyle, fontColor) {
-                this.css("fontSize", fontSize);
-                this.css("fontWeight", fontWeight);
-                this.css("fontStyle", fontStyle);
-                this.css("color", fontColor);
-            };
-
-            $("p").lookGood("30px", "bold", "italic", "#ff00ff");
+            $("tr").each(function() {
+                console.log($("td:first", this).html() + ": " + $("td:last", this).html());
+            });
         })
     </script>
 </body>
